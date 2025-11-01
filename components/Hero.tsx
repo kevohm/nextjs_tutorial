@@ -1,55 +1,61 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { Users, Clock, Shield } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="bg-gradient-to-br from-blue-50 to-blue-100 py-20">
+    <section className="h-[calc(100vh-4.5rem)] bg-linear-to-br from-background to-muted/40 py-20 transition-colors">
       <div className="max-w-7xl mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-12 items-center">
+          {/* Left Side - Text */}
           <div>
-            <h1 className="text-5xl font-bold text-gray-900 mb-6 leading-tight text-balance">
+            <h1 className="text-5xl font-bold text-foreground mb-6 leading-tight text-balance">
               Connect with Healthcare Providers On-Demand
             </h1>
-            <p className="text-gray-700 mb-8 leading-relaxed">
+            <p className="text-muted-foreground mb-8 leading-relaxed">
               HealthConnect bridges the gap between patients and verified
               healthcare professionals. Find and book appointments with doctors,
               nurses, and home-based care providers in minutes.
             </p>
 
+            {/* Buttons */}
             <div className="flex gap-4 mb-8">
-              <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8">
+              <Button className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 transition-colors">
                 Find a Provider
               </Button>
               <Button
                 variant="outline"
-                className="text-blue-600 border-blue-600 hover:bg-blue-50 bg-transparent"
+                className="border-primary text-primary hover:bg-primary/10 transition-colors"
               >
                 List as Provider
               </Button>
             </div>
 
-            <div className="flex gap-8">
+            {/* Stats */}
+            <div className="flex flex-wrap gap-6 text-sm">
               <div className="flex items-center gap-2">
-                <Users className="w-5 h-5 text-blue-600" />
-                <span className="text-sm text-gray-700">
+                <Users className="w-5 h-5 text-primary" />
+                <span className="text-muted-foreground">
                   500+ Verified Providers
                 </span>
               </div>
               <div className="flex items-center gap-2">
-                <Clock className="w-5 h-5 text-blue-600" />
-                <span className="text-sm text-gray-700">
+                <Clock className="w-5 h-5 text-primary" />
+                <span className="text-muted-foreground">
                   10K+ Appointments Booked
                 </span>
               </div>
               <div className="flex items-center gap-2">
-                <Shield className="w-5 h-5 text-blue-600" />
-                <span className="text-sm text-gray-700">HIPAA Compliant</span>
+                <Shield className="w-5 h-5 text-primary" />
+                <span className="text-muted-foreground">HIPAA Compliant</span>
               </div>
             </div>
           </div>
 
+          {/* Right Side - Image + Floating Card */}
           <div className="relative">
-            <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+            <div className="bg-card rounded-2xl shadow-xl overflow-hidden border border-border transition-colors">
               <img
                 src="/patient-doctor-consultation.jpg"
                 alt="Healthcare consultation"
@@ -57,18 +63,19 @@ export default function Hero() {
               />
             </div>
 
-            <div className="absolute bottom-6 left-6 bg-white rounded-xl shadow-lg p-4 max-w-xs">
-              <p className="text-sm font-semibold text-gray-900 mb-3">
+            {/* Floating mini-card */}
+            <div className="absolute bottom-6 left-6 bg-popover border border-border rounded-xl shadow-lg p-4 max-w-xs transition-colors">
+              <p className="text-sm font-semibold text-foreground mb-3">
                 What type of care do you need?
               </p>
               <div className="space-y-2">
-                <button className="w-full px-3 py-2 bg-blue-100 text-blue-700 rounded-lg text-sm font-medium hover:bg-blue-200">
+                <button className="w-full px-3 py-2 bg-primary/10 text-primary rounded-lg text-sm font-medium hover:bg-primary/20 transition-colors">
                   🏥 Doctor Consultation
                 </button>
-                <button className="w-full px-3 py-2 bg-gray-100 text-gray-700 rounded-lg text-sm font-medium hover:bg-gray-200">
+                <button className="w-full px-3 py-2 bg-muted text-muted-foreground rounded-lg text-sm font-medium hover:bg-muted/80 transition-colors">
                   👩‍⚕️ Nurse Care
                 </button>
-                <button className="w-full px-3 py-2 bg-gray-100 text-gray-700 rounded-lg text-sm font-medium hover:bg-gray-200">
+                <button className="w-full px-3 py-2 bg-muted text-muted-foreground rounded-lg text-sm font-medium hover:bg-muted/80 transition-colors">
                   🏠 Home Visit
                 </button>
               </div>

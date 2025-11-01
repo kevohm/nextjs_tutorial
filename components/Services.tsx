@@ -1,3 +1,5 @@
+"use client";
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Stethoscope, Home, Users, Zap } from "lucide-react";
 
@@ -30,11 +32,11 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-background text-foreground transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-12">
-          <p className="text-blue-600 font-semibold mb-2">Our Platform</p>
-          <h2 className="text-4xl font-bold text-gray-900 text-balance">
+          <p className="text-primary font-semibold mb-2">Our Platform</p>
+          <h2 className="text-4xl font-bold text-foreground text-balance">
             Healthcare Services Tailored to Your Needs
           </h2>
         </div>
@@ -45,16 +47,20 @@ export default function Services() {
             return (
               <Card
                 key={idx}
-                className="bg-white border-0 shadow-sm hover:shadow-md transition-shadow"
+                className="bg-card border border-border shadow-sm hover:shadow-md transition-shadow"
               >
                 <CardHeader>
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-3">
-                    <Icon className="w-6 h-6 text-blue-600" />
+                  <div className="w-12 h-12 bg-primary/10 dark:bg-primary/20 rounded-lg flex items-center justify-center mb-3">
+                    <Icon className="w-6 h-6 text-primary" />
                   </div>
-                  <CardTitle className="text-lg">{service.title}</CardTitle>
+                  <CardTitle className="text-lg text-foreground">
+                    {service.title}
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-600 text-sm">{service.description}</p>
+                  <p className="text-muted-foreground text-sm">
+                    {service.description}
+                  </p>
                 </CardContent>
               </Card>
             );
