@@ -1,4 +1,5 @@
 import { Heart } from "lucide-react";
+import Logo from "./Logo";
 
 export default function Footer() {
   return (
@@ -6,13 +7,8 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4">
         <div className="grid md:grid-cols-5 gap-8 mb-8">
           {/* Brand */}
-          <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-                <Heart className="w-5 h-5 text-primary-foreground" />
-              </div>
-              <span className="font-semibold text-foreground">Medical</span>
-            </div>
+          <div className="flex flex-col gap-4">
+            <Logo/>
             <p className="text-sm text-muted-foreground">
               Leading healthcare innovation and patient care.
             </p>
