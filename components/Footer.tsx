@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-5 gap-8 mb-8">
           {/* Brand */}
           <div className="flex flex-col gap-4">
-            <Logo/>
+            <Logo />
             <p className="text-sm text-muted-foreground">
               Leading healthcare innovation and patient care.
             </p>
@@ -77,7 +77,7 @@ export default function Footer() {
         {/* Bottom */}
         <div className="border-t border-border pt-8">
           <p className="text-sm text-center text-muted-foreground">
-            © 2025 Medical. All rights reserved.
+            © 2025 HealthConnect. All rights reserved.
           </p>
         </div>
       </div>
